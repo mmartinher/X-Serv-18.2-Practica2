@@ -1,0 +1,28 @@
+<html>
+<style>
+body {
+	background-image: url('http://fondosdepantallaenmovimiento.com/wp-content/uploads/2015/09/fondos-negros-para-pantalla-3.jpg')
+}
+</style>
+
+<body>
+	<FONT FACE="courier">
+	<font color='white'><center><h1>
+		<a>Lista de URLs: </a></br></br>
+	</h1>
+
+	{% for url in lista_urls %}
+	<li><h3>
+		<pre>URL original: {{ url.direccion_URL }} 
+URL acortada: {{ url.id }}
+	</h3></li>
+	{% endfor %}
+	<h2></br>
+		<form action='' method='POST'>Introduce tu URL: 
+		<input type='text' name='url' value='' />
+		<input type='submit' value='Acortar'>
+		</form>
+	</h2></center></font></FONT>
+
+</body>
+</html>
